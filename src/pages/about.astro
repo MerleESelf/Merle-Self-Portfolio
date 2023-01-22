@@ -1,0 +1,55 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="About | Merle Self" description="About Merle Self" />
+		<style>
+			.heroImg {
+				max-height: 24rem;
+				object-fit: cover;
+				overflow: hidden;
+			}
+
+			.heroImg img {
+				width: 100%;
+			}
+
+			.bio {
+				font-size: var(--f-u1);
+				line-height: 2;
+				margin-top: 4em;
+			}
+
+			.wrapper.bio {
+				max-width: 50em;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<h1 class="">About Merle</h1>
+			<div class="heroImg">
+				<img width="1400" height="350" src="/public/assets/snakeplant.JPG" />
+			</div>
+			<div class="bio wrapper">
+				<p>
+					Prior to my time in tech I’d been working in Staff Management within
+					the broader world of customer service, and speciality coffee. Over the
+					last two years I’ve done a lot of introspection, identifying my
+					interests for the future of my career, and seeing how I can apply
+					these to my desire to participate in sustainable, and impactful work.
+					I’ve always been fascinated with the key role that technology has been
+					playing in the world of information equity, and its ability to change
+					the landscape of many different industries. I'm looking forward to all
+					the new opportunities that are to come!
+				</p>
+			</div>
+		</div>
+		<Footer />
+	</body>
+</html>
