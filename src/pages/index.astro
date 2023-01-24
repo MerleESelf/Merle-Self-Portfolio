@@ -18,7 +18,7 @@ const featuredProject = projects[0]!;
 	<head>
 		<MainHead
 			title="Merle Self: Personal Site"
-			description="Merle Self: Developer, Artist, and former speciality coffee professional..."
+			description="Merle Self: Developer, Artist and Collector"
 		/>
 		<style>
 			.wrapper {
@@ -46,7 +46,6 @@ const featuredProject = projects[0]!;
 			.overlay {
 				position: absolute;
 				top: 0;
-				left: 0;
 				width: 100%;
 				height: 100%;
 				z-index: 10;
@@ -54,7 +53,6 @@ const featuredProject = projects[0]!;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				padding-left: 2rem;
 			}
 
 			@media (min-width: 750px) {
@@ -110,6 +108,7 @@ const featuredProject = projects[0]!;
 				background-color: var(--t-fg);
 				padding: 0.25em 0.5em;
 				z-index: 2;
+				text-decoration: none;
 			}
 
 			@media (min-width: 750px) {
@@ -126,9 +125,9 @@ const featuredProject = projects[0]!;
 				background-color: var(--c-green);
 			}
 
-			.role:nth-of-type(3) .invert {
+			/* .role:nth-of-type(3) .invert {
 				background-color: var(--c-orange);
-			}
+			} */
 
 			.role:hover .invert {
 				clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -179,6 +178,23 @@ const featuredProject = projects[0]!;
 				text-align: center;
 				margin-top: 2em;
 			}
+
+			.bioImg {
+				width: 150px;
+				height: 150px;
+			}
+			@media (min-width: 750px) {
+				.bioImg {
+					width: 200px;
+					height: 200px;
+				}
+			}
+			@media (min-width: 1200px) {
+				.bioImg {
+					width: 400px;
+					height: 400px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -193,25 +209,23 @@ const featuredProject = projects[0]!;
 			/>
 
 			<div class="overlay">
-				<img width="225" height="225" src="public/assets/MerleTurnedMask.png" />
-
+				<img class="bioImg" src="public/assets/MerleTurnedMask.png" />
 				<h1 class="title">Merle Self</h1>
 				<div class="roles">
-					<span class="role">
-						Full Stack Developer <span class="invert">
-							Full Stack Developer</span
-						></span
-					>
-
-					<span class="role"
-						>Artist & Collector <span class="invert">
-							Artist & Collector
-						</span></span
-					>
-
-					<span class="role">
-						Coffee Professional <span class="invert">Coffee Professional</span>
-					</span>
+					<a href="/projects" class="role">
+						<span>
+							Full Stack Developer <span class="invert">
+								Full Stack Developer</span
+							></span
+						>
+					</a>
+					<a href="/about" class="role">
+						<span
+							>Artist & Collector <span class="invert">
+								Artist & Collector</span
+							></span
+						>
+					</a>
 				</div>
 			</div>
 		</header>
@@ -227,8 +241,8 @@ const featuredProject = projects[0]!;
 				<div class="section">
 					<h3 class="sectionTitle">About Merle</h3>
 					<p class="bio">
-						<span>Hey there!</span> I’m Merle, a Junior Fullstack Software Engineer.
-						I'm currently looking for my first role as a Tech professional.
+						<span>Hey there!</span> I’m Merle, a Junior Fullstack Software Engineer,
+						and I'm currently looking for my first job as a Dev!
 					</p>
 					<p>
 						<a href="/about">Read more</a>
